@@ -46,15 +46,19 @@ void addVehical(Vehical vehicals){
 	
 }
 
-void removeVehical(String licensePlate,String nlicen){
-	
-	
-		 for(int i=0; i<vehicalcount;i++){
-		 if(vehiarray[i].getLicense()==licensePlate){
-			 vehiarray[i].setLicense(nlicen);
-				return;
-				}
-			}
+void removehical(String licensePlate) {
+    for (int i = 0; i < vehicalcount; i++) 
+	{ if (vehiarray[i].getLicense() == licensePlate)
+		{  for (int j = i; j < vehicalcount - 1; j++)
+			{ 
+                vehiarray[j] = vehiarray[j + 1]; 
+            }
+            vehiarray[vehicalcount - 1] = null; 
+            vehicalcount--; 
+            return; 
+        }
+    }
+    System.out.println("Licence Plate " + licensePlate + " is n");
 }
 
   void displayDetails(){
@@ -75,7 +79,7 @@ void removeVehical(String licensePlate,String nlicen){
 	p1.addVehical(new Vehical("XYZ789","Jane Smith",4));
 	p1.addVehical(new Vehical("LMN456","Bob Brownh",1));	 
 	   
-	 p1.removeVehical("XYZ789","      ")  ;
+	 p1.removehical("XYZ789")  ;
 	   
 	   p1.displayDetails();
  }

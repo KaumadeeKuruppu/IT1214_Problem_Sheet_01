@@ -1,4 +1,4 @@
-public class Vehical{
+ class Vehical{
 	private String licensePlate;
 	private String name;
 	private int hoursParked;
